@@ -102,7 +102,7 @@ namespace YoloSong.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Singer,Author")] Song song ,int[] categoriesId)
+        public async Task<IActionResult> Edit(int id, Song song ,int[] categoriesId)
         {
             if (id != song.Id)
             {

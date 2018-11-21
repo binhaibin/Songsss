@@ -16,6 +16,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
+                <label asp-for="thumbnail" class="control-label"></label>
+                <input asp-for="thumbnail" class="form-control" />
+                <span asp-validation-for="thumbnail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
@@ -37,12 +42,12 @@
                     {
                         var check = false;
                         foreach (var d in Model.SongCategories)
-                         {
-                             if (c.Id == d.CategoryId)
-                             {
-                                 check = true;
-                             }
-                         }
+                        {
+                            if (c.Id == d.CategoryId)
+                            {
+                                check = true;
+                            }
+                        }
                         <li><input type="checkbox" value="@c.Id" name="categoriesId[]" @(check ? "disabled" : "") /> @c.Name</li>
                     }
 
