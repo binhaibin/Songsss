@@ -24,6 +24,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Author)
         </th>
+        <th>
+            Categories
+        </th>
         <th></th>
     </tr>
     </thead>
@@ -31,7 +34,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <img src="@item.thumbnail" width="200" height="200"/>
+            <img src="@item.thumbnail" width="200" height="200" style="border-radius: 50% ; vertical-align: middle"/>
         </td>
        
         <td>
@@ -46,7 +49,7 @@
         <td>
             @foreach (var ca in item.SongCategories)
             {
-                @ca.Category.Name
+                @ca.Category.Name <br>
             }
         </td>
         <td>

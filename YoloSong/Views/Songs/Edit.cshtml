@@ -43,7 +43,7 @@
                                  check = true;
                              }
                          }
-                        <li><input type="checkbox" value="@c.Id" name="categoriesId[]" @(check ? "checked" : "") /> @c.Name</li>
+                        <li><input type="checkbox" value="@c.Id" name="categoriesId[]" @(check ? "disabled" : "") /> @c.Name</li>
                     }
 
                 </ul>
